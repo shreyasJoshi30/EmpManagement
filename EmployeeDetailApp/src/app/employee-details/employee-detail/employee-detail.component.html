@@ -10,9 +10,9 @@
 
   <input name="email" type="email" #email="ngModel" [(ngModel)]="service.formData.email" class="form-control" placeholder="Employee Email" required>
 
-  <input name="phone" #phone="ngModel" [pattern]="mobNumberPattern" [(ngModel)]="service.formData.phone" class="form-control" placeholder="Employee Phone" required maxlength="15">
+  <input name="phone" #phone="ngModel"  [(ngModel)]="service.formData.phone" class="form-control" placeholder="Employee Phone" required maxlength="15">
 
-  <input name="mobile" #mobile="ngModel" [pattern]="mobNumberPattern" [(ngModel)]="service.formData.mobile" class="form-control" placeholder="Employee Mobile" maxlength="15" >
+  <input name="mobile" #mobile="ngModel"  [(ngModel)]="service.formData.mobile" class="form-control" placeholder="Employee Mobile" maxlength="15" >
 
 </div> 
 

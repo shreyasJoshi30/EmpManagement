@@ -25,7 +25,15 @@ export class EmployeeDetailListComponent implements OnInit {
 
   activateEmployee(ed:EmployeeDetail) {
     ed.isActive = ed.isActive ? false : true;
-   this.service.flagEmpActivation(ed.empId,ed);
+   this.service.flagEmpActivation(ed.empId,ed)
+   .subscribe(res =>{
+    this.service.refreshList();
+    this.resetForm()
+    this.toastr.info("Success!","Employee Management")
+
+  }, err => {
+      console.log(err)
+  } );
   }
 
   deleteEmployee(empId) {
