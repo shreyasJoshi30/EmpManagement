@@ -1,0 +1,32 @@
+<table class="table table-hover" >
+
+        <th>Id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Mobile</th>
+        <th>Status</th>
+        <th>Change Status</th>
+        <th>Delete</th>
+<tr *ngFor = "let ed of service.list" (click)="populateForm(ed)">
+
+        
+    
+        <td>{{ed.empId}}</td>
+        <td>{{ed.firstName}}</td>
+        <td>{{ed.lastName}}</td>
+        <td>{{ed.email}}</td>
+        <td>{{ed.phone}}</td>       
+        <td>{{ed.mobile}}</td>
+        <td>{{ed.isActive ? "Active" : "Inactive"}}</td>
+        <td>
+                <button (click)="activateEmployee(ed)">{{ed.isActive ? "Deactivate" : "Activate"}}</button>
+        </td>
+        <td>
+                <button (click)="deleteEmployee(ed.empId)">Delete</button>
+        </td>
+
+</tr>
+
+</table>
